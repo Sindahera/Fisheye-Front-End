@@ -1,22 +1,22 @@
 {
-  "name": "front-end-fisheye",
+  "name": "fisheye-front-end",
   "version": "1.0.0",
-  "description": "Photographers' app",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sindahera/Front-End-Fisheye.git"
+    "url": "git+https://github.com/Sindahera/Fisheye-Front-End.git"
   },
-  "keywords": [
-    "Fisheye"
-  ],
-  "author": "SINDAHERA RICHARD",
+  "author": "sindahera richard",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Sindahera/Front-End-Fisheye/issues"
+    "url": "https://github.com/Sindahera/Fisheye-Front-End/issues"
   },
-  "homepage": "https://github.com/Sindahera/Front-End-Fisheye#readme"
+  "homepage": "https://github.com/Sindahera/Fisheye-Front-End#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
 }

@@ -1,0 +1,21 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "main.scss",
+        "util/variables.scss",
+        "util/functions.scss",
+        "util/mixins.scss",
+        "base/animation.scss",
+        "base/base.scss",
+        "base/typography.scss",
+        "components/btn.scss",
+        "components/card.scss",
+        "layout/header.scss",
+        "layout/nav-bar.scss",
+        "layout/container.scss",
+        "layout/footer.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
