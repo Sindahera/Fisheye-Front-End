@@ -1,1 +1,53 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+/* color */
+/* font */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.btn {
+  background-color: #901C1C;
+  color: white;
+  padding: 1em 3em;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.btn:hover, .btn:focus {
+  background-color: #D3573C;
+  color: black;
+}
+/*# sourceMappingURL=main.css.map */
