@@ -11,7 +11,7 @@
                 "portrait": "account.png"
             },
             {
-                "name": "Autre data test",
+                "name": "Autre test",
                 "id": 2,
                 "city": "Londres",
                 "country": "UK",
