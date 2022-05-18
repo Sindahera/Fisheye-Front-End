@@ -18,5 +18,10 @@
   "homepage": "https://github.com/Sindahera/Fisheye-Front-End#readme",
   "dependencies": {
     "node-sass": "^7.0.1"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "prettier": "^2.6.2"
   }
 }
