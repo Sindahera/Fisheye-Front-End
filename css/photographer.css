@@ -6,6 +6,10 @@ video {
 
 #contact_modal {
     display: none;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .photograph-header {
@@ -16,6 +20,7 @@ video {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
   }
   
   /* .photograph-header img {
@@ -72,10 +77,14 @@ video {
     cursor: pointer;
 }
 
+
+
 .modal {
+    filter: drop-shadow(-5px 10px 30px rgba(0, 0, 0, 0.25));
     border-radius: 5px;
     background-color: #DB8876;
-    width: 50%;
+    /* width: 50%; */
+    width: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,6 +96,9 @@ video {
 .modal header {
     justify-content: space-between;
     width: 100%;
+    align-items: flex-start;
+    height: fit-content;
+    margin-bottom: 20px;
 }
 
 .modal header img {
@@ -96,7 +108,8 @@ video {
 .modal header h2 {
     font-size: 64px;
     font-weight: normal;
-    text-align: center;
+    text-align: left;
+    margin-top: -20px;
 }
 
 form {
@@ -109,6 +122,7 @@ form {
 form label {
     color: #312E2E;
     font-size: 36px;
+    margin-top: 10px;
 }
 
 form div {
@@ -119,12 +133,18 @@ form div {
     margin-bottom: 26px;
 }
 
-form input {
-    width: 100%;
-    height: 68px;
-    border: none;
-    border-radius: 5px;
+form input,
+textarea {
+  width: 100%;
+  height: 68px;
+  border: none;
+  border-radius: 5px;
+  font-size: 36px;
+  padding: 5px;
 }
+textarea {
+    height: 170px;
+  }
 
 /* Media section */
 .media-section {
@@ -172,5 +192,28 @@ form input {
   }
   
   .media-card__likes i {
+    margin-left: 5px;
+  }
+
+  /* info-card section */
+ .info-card {
+    position: fixed;
+    width: 376px;
+    bottom: 0;
+    right: 5%;
+    padding: 20px 35px;
+    border-radius: 5px 5px 0 0;
+    background-color: var(--primary-color-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+  }
+  
+  .info-card__likes {
+    margin-right: auto;
+  }
+  
+  .info-card__likes i {
     margin-left: 5px;
   }

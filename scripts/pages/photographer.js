@@ -33,6 +33,17 @@ function displayMedia(media, name) {
       mediaSection.appendChild(mediaElement);
     });
   }
+
+// données requises :
+// nombre total de likes (media)
+// prix (photographer)
+// doit retourner
+function displayInfoBar(photographer, totalLikes) {
+    // eslint-disable-next-line no-undef
+    const infoBarModel = photographerFactory(photographer);
+    const infoBarElement = infoBarModel.getUserInfoCardDOM(totalLikes);
+    document.querySelector('#main').appendChild(infoBarElement);
+}
   
   async function getPhotographers() {
     // fetching the photographers data
@@ -63,12 +74,17 @@ async function getMedia(id) {
     return media;
   }
 
+function getTotalLikes(media) {
+   return media.reduce((total, currentItem) => total + currentItem.likes, 0);
+}
+
 async function init() {
  // Récupère les datas des photographes
  const photographer = await getPhotographer();
- displayHeader(photographer);
  const media = await getMedia(id);
+ displayHeader(photographer);
  displayMedia(media, photographer.name);
+ displayInfoBar(photographer, getTotalLikes(media));
 }
 
 init();
