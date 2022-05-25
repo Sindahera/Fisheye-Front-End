@@ -30,8 +30,7 @@ function getUserCardDOM() {
 
   // Setting accessibility attributes
 
-  photographerImg.setAttribute('alt', `Photo de profil de ${name}`);
-  photographerLink.setAttribute('aria-label', `En savoir plus sur ${name}`);
+  photographerLink.setAttribute('aria-label', `${name}`);
 
   // Appending html children elements to the main element
   photographerProfile.appendChild(photographerLink);
@@ -68,7 +67,7 @@ function getUserHeaderDOM() {
 
   // Setting accessibility attributes
 
-  photographerImg.setAttribute('alt', `Photo de profil de ${name}`);
+  photographerImg.setAttribute('alt', `${name}`);
 
   // Appending html children elements to the main element
   photographerDescription.appendChild(photographerName);
@@ -143,7 +142,9 @@ function getUserMediaDOM() {
       const mediaThumbnail = document.createElement('div');
       const media = document.createElement(`${item.image ? 'img' : 'video'}`);
       media.setAttribute('src', mediaPath);
-      media.setAttribute('alt', `Photo titled ${title}`);
+      media.setAttribute('aria-label', `${title}, closeup view`);
+      media.setAttribute('onload', 'getMedia()');
+      media.setAttribute('tabindex', '0');
       const mediaDescription = document.createElement('div');
       const mediaTitle = document.createElement('h2');
       const mediaLikes = document.createElement('span');
