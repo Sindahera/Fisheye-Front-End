@@ -16,25 +16,62 @@
   </head>
   <body>
     <header>
-      <a href="/"><img src="assets/images/logo.png" class="logo" /></a>
+      <a href="/">
+        <img
+          src="assets/images/logo.png"
+          class="logo"
+          alt="Fisheye Home page"
+        />
+      </a>
     </header>
     <main id="main">
-      <div class="photograph-header">
+      <section class="photograph-header">
         <button class="contact_button" onclick="displayModal()">
           Contactez-moi
         </button>
-      </div>
+      </section>
+      <section class="sorting">
+        <label class="sorting__title combo-label" id="combo1-label"
+          >Trier par</label
+        >
+        <div class="combo js-select">
+          <div
+            aria-controls="listbox1"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="combo1-label"
+            id="combo1"
+            class="combo-input"
+            role="button"
+            data-value="0"
+            tabindex="0"
+          ></div>
+          <ul
+            class="combo-menu"
+            role="listbox"
+            id="listbox1"
+            aria-labelledby="combo1-label"
+            tabindex="-1"
+          >
+            <!-- options are inserted here -->
+            <!-- e.g. <ul role="option" id="op1">option text</div>  -->
+          </ul>
+        </div>
+      </section>
     </main>
-    <div id="contact_modal" class="modal" aria-labelledby="2">
+    <div id="contact_modal" class="modal" aria-labelledby="contact-me">
       <header>
-        <h2 id="2">Contactez-moi</h2>
+        <h2 id="contact-me">Contactez-moi</h2>
         <img
+          id="close-modal"
+          tabindex="0"
           src="assets/icons/close.svg"
-          aria-label="Close Contact form"
+          alt="Close Contact form"
+          role="button"
           onclick="closeModal()"
         />
       </header>
-      <form id="contact-form">
+      <form role="dialog" id="contact-form">
         <div>
           <label for="firstname">Prénom</label>
           <input id="firstname" name="firstname" />
@@ -45,41 +82,54 @@
           <label for="message">Votre message</label>
           <textarea id="message" name="message" rows="3" cols=""></textarea>
         </div>
-        <button class="contact_button" aria-label="Send">Envoyer</button>
+        <button class="contact_button" type="submit" aria-label="Send">
+          Envoyer
+        </button>
       </form>
     </div>
-    <div class="lightbox">
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-label="Image closeup view"
+    >
       <div class="lightbox__left-controls">
         <img
-          id="right-arrow"
+          role="link"
+          tabindex="0"
+          id="left-arrow"
           class="lightbox__arrow"
           src="assets/icons/left-arrow.svg"
           alt="Previous image"
-          tabindex="O"
           onclick="previousMedia()"
         />
+        <h2 class="media-card__title lightbox__title"></h2>
       </div>
       <div class="lightbox__img"></div>
       <div class="lightbox__right-controls">
         <img
+          role="button"
+          tabindex="0"
           class="lightbox__close"
-          src="assets/icons/close.svg"
-          aria-label="Close lightbox"
+          src="assets/icons/close-red.svg"
+          alt="Close dialog"
           onclick="closeLightbox()"
         />
         <img
-          id="left-arrow"
+          role="link"
+          tabindex="0"
+          id="right-arrow"
           class="lightbox__arrow"
           src="assets/icons/right-arrow.svg"
           alt="Next image"
-          tabindex="O"
           onclick="nextMedia()"
         />
       </div>
     </div>
-    <script src="/scripts/factories/photographer.js"></script>
-    <script src="/scripts/pages/photographer.js"></script>
-    <script src="/scripts/utils/contactForm.js"></script>
-    <script src="/scripts/utils/lightbox.js"></script>
+    <script src="scripts/factories/photographer.js"></script>
+    <script src="scripts/pages/photographer.js"></script>
+    <script src="scripts/utils/contactForm.js"></script>
+    <script src="scripts/utils/lightbox.js"></script>
+    <script src="scripts/utils/sortingMenu.js"></script>
   </body>
 </html>
