@@ -1,5 +1,5 @@
 function photographerFactory(data) {
-  const { id, name, portrait, city, tagline, price, totalLikes } = data;
+  const { id, name, portrait, city,country, tagline, price, totalLikes } = data;
   const picture = `assets/photographers/${portrait}`;
 
   function getUserCardDOM() {
@@ -9,6 +9,7 @@ function photographerFactory(data) {
     const photographerImg = document.createElement('img');
     const photographerName = document.createElement('h2');
     const photographerCity = document.createElement('h3');
+    const photographerCountry = document.createElement('h3');
     const photographerTagline = document.createElement('p');
     const photographerPrice = document.createElement('span');
 
@@ -18,12 +19,14 @@ function photographerFactory(data) {
     photographerImg.classList.add('photographer-card__img');
     photographerName.classList.add('photographer-card__name');
     photographerCity.classList.add('photographer-card__city');
+    photographerCountry.classList.add('photographer-card__country');
     photographerTagline.classList.add('photographer-card__tagline');
     photographerPrice.classList.add('photographer-card__price');
 
     // Set text content
     photographerName.textContent = name;
     photographerCity.textContent = city;
+    photographerCountry.textContent = country;
     photographerTagline.textContent = tagline;
     photographerPrice.textContent = `${price}€/jour`;
 
@@ -38,6 +41,7 @@ function photographerFactory(data) {
     photographerLink.appendChild(photographerImg);
     photographerLink.appendChild(photographerName);
     photographerProfile.appendChild(photographerCity);
+    photographerProfile.appendChild(photographerCountry);
     photographerProfile.appendChild(photographerTagline);
     photographerProfile.appendChild(photographerPrice);
 
@@ -52,6 +56,7 @@ function photographerFactory(data) {
     const photographerImg = document.createElement('img');
     const photographerName = document.createElement('h2');
     const photographerCity = document.createElement('h3');
+    const photographerCountry = document.createElement('h3');
     const photographerTagline = document.createElement('p');
 
     // Set classes
@@ -59,11 +64,13 @@ function photographerFactory(data) {
     photographerImg.classList.add('photograph-header__img');
     photographerName.classList.add('photograph-header__name');
     photographerCity.classList.add('photograph-header__city');
+    photographerCountry.classList.add('photographer-card__country');
     photographerTagline.classList.add('photograph-header__tagline');
 
     // Set text content
     photographerName.textContent = name;
     photographerCity.textContent = city;
+    photographerCountry.textContent = country;
     photographerTagline.textContent = tagline;
 
     // Set attributes
@@ -72,7 +79,7 @@ function photographerFactory(data) {
 
     // Append html children elements to main element
     photographerDescription.appendChild(photographerName);
-    photographerDescription.appendChild(photographerCity);
+    photographerDescription.appendChild(photographerCity, photographerCountry );
     photographerDescription.appendChild(photographerTagline);
     photographerImgContainer.appendChild(photographerImg);
 

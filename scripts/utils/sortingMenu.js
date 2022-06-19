@@ -391,6 +391,6 @@ window.addEventListener('load', function () {
   const selectEls = document.querySelectorAll('.js-select');
 
   selectEls.forEach((el) => {
-    new Select(el, options);
+     Select(el, options);
   });
 });

@@ -1,4 +1,4 @@
-export default function tagNavigation() {
+export function tagNavigation() {
     // Filter navigation section
     const tagList = document.querySelectorAll('.nav ul li, .card__photographer-tags-list-item');
     const selectionArt = document.querySelectorAll('.art');
