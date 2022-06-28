@@ -8,3 +8,5 @@
 4. Rendre le site Web interactif, y compris des fonctionnalités telles que la possibilité pour l'utilisateur d'ajouter des goûts et la possibilité de filtrer les photographes par catégories
 5. Créez un formulaire de contact, qui comprend des vérifications de validation par rapport à l'utilisateur pour vous assurer que les détails corrects ont été ajoutés.
 6. Utilisez le modèle de méthode d'usine dans mon code pour tenir compte du fait que les profils de photographe changeront entre la vidéo et les images
+
+# https://sindahera.github.io/Fisheye-Front-End/
